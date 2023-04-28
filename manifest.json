@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "My Extension",
+  "version": "1.0",
+  "description": "My first Chrome extension",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/jobs/*"],
+      "js": ["content_script.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  }
+}
